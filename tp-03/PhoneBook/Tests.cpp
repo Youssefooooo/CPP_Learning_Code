@@ -1,6 +1,9 @@
 #undef NDEBUG
 
 #include "Tests.h"
+#include "PhoneNumber.h"
+#include "Person.h"
+#include "PhoneBook.h"
 
 #include <cassert>
 #include <iostream>
