@@ -1,18 +1,11 @@
 #pragma once
 
+#include "Driver.h"
 #include <iostream>
-
-class Driver
-{
-};
 
 class Vehicle
 {
 public:
-    Vehicle(const Driver& driver)
-        : _driver { driver }
-    {}
-
     virtual ~Vehicle() {}
 
     virtual unsigned int drive() const
@@ -21,6 +14,11 @@ public:
         return 0u;
     }
 
-private:
+protected:
+    Vehicle(const Driver& driver)
+        : _driver { driver }
+    {}
+
+
     const Driver& _driver;
 };

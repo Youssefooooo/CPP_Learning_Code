@@ -45,5 +45,31 @@ public:
 		return result;
 	}
 
+	virtual PointContainer intersect(const Circle& c) const override {
+		const Rectangle r = *this;
+		return c.intersect(r);
+	}
+
+	PointContainer intersect(const Line& ln) const override{
+		PointContainer result;
+		for(const LineSegment& ls: get_border()){
+			result.merge(ls.intersect(ln));
+		}
+		return result;
+	}
+
+	PointContainer intersect(const LineSegment& ln) const {
+		PointContainer result;
+		for(const LineSegment& ls: get_border()){
+			result.merge(ls.intersect(ln));
+		}
+		filter_points_inside(result);
+		return result;
+	}
+
+	std::ostream& print(std::ostream& os) const override{
+		return os << "rectangle " << lower_left << " & " << upper_right;
+	}
+
 	~Rectangle() = default;
 };
