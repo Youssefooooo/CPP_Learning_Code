@@ -24,8 +24,13 @@ void intersect_all(const std::vector<Shape*>& shapes) {
 int main(int, char**) {
     std::vector<Shape*> some_shapes;
     // test 1
+<<<<<<< HEAD
     //some_shapes.emplace_back(new Line{{0,4}, {8,0}});
     //some_shapes.emplace_back(new LineSegment{{0,0}, {10,10}});
+=======
+    some_shapes.emplace_back(new Line{{0,4}, {8,0}});
+    some_shapes.emplace_back(new LineSegment{{0,0}, {10,10}});
+>>>>>>> upstream/master
 
     // test 2
     //some_shapes.emplace_back(new LineSegment{{0,2}, {10,2}});
@@ -34,10 +39,15 @@ int main(int, char**) {
     //some_shapes.emplace_back(new Rectangle{{10,-1}, {-10,1}});
 
     // test 4
+<<<<<<< HEAD
     some_shapes.emplace_back(new Circle{{1,1}, 5});
     
     some_shapes.emplace_back(new Circle{{6,1}, 5});
 
+=======
+    //some_shapes.emplace_back(new Circle{{1,1}, 5});
+    
+>>>>>>> upstream/master
     intersect_all(some_shapes);
     for(auto& p: some_shapes) delete p;
 }

@@ -3,13 +3,17 @@
 #include "line.hpp"
 
 class LineSegment: public Line {
+<<<<<<< HEAD
 protected:
 	using Line::first;
 	using Line::last;
+=======
+>>>>>>> upstream/master
 public:
 	using Line::Line;
 
 	~LineSegment() = default;
+<<<<<<< HEAD
 
 	bool point_is_inside(const Point& p) const {
 		float minx, maxx, miny, maxy;
@@ -60,4 +64,6 @@ public:
 	std::ostream& print(std::ostream& os) const override{
 		return os << "line segment " << first << "--" << last;
 	}
+=======
+>>>>>>> upstream/master
 };

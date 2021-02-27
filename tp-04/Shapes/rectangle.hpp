@@ -45,6 +45,7 @@ public:
 		return result;
 	}
 
+<<<<<<< HEAD
 	virtual PointContainer intersect(const Circle& c) const override {
 		const Rectangle r = *this;
 		return c.intersect(r);
@@ -71,5 +72,7 @@ public:
 		return os << "rectangle " << lower_left << " & " << upper_right;
 	}
 
+=======
+>>>>>>> upstream/master
 	~Rectangle() = default;
 };
